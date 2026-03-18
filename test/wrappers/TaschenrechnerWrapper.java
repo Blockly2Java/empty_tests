@@ -2,6 +2,8 @@ package wrappers;
 
 import levenshtein.*;
 
+import java.lang.reflect.Method;
+
 public class TaschenrechnerWrapper<T> extends ClassWrapper<T>
 {
     private final MethodWrapper<T, ?> addieren;
@@ -9,6 +11,7 @@ public class TaschenrechnerWrapper<T> extends ClassWrapper<T>
     private final MethodWrapper<T, ?> multiplizieren;
     private final MethodWrapper<T, ?> dividieren;
     private final MethodWrapper<T, ?> mittelwert;
+    private final MethodWrapper<T, ?> potenzieren;
 
 
     public TaschenrechnerWrapper()
@@ -63,6 +66,15 @@ public class TaschenrechnerWrapper<T> extends ClassWrapper<T>
                 "public",
                 "static"
         );
+
+        potenzieren = new MethodWrapper<>(
+                this,
+                "potenzieren",
+                double.class,
+                new Class<?>[] { double.class, double.class },
+                "public",
+                "static"
+        );
     }
     @Override
     public Object getObj(boolean forceNew, boolean useByteBuddy) {
@@ -86,5 +98,9 @@ public class TaschenrechnerWrapper<T> extends ClassWrapper<T>
     }
     public MethodWrapper<T, ?> mittelwert() {
         return mittelwert;
+    }
+
+    public MethodWrapper<T, ?> potenzieren() {
+        return potenzieren;
     }
 }

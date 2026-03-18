@@ -96,4 +96,15 @@ public class TestManager {
             fail(e.getMessage());
         }
     }
+
+
+    @Test
+    void testPotenzieren() {
+        try {
+            Tests.testPotenzieren();
+        }
+        catch (AssertionError e) {
+            fail(e.getMessage());
+        }
+    }
 }

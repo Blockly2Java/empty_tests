@@ -125,4 +125,22 @@ public class Tests {
             }
         }
     }
+
+
+    public static void testPotenzieren() {
+        setup();
+
+        for(int i = 0; i < 4; i++) {
+            for (double[] value : values) {
+                double z1 = i < 2 ? value[0] : -value[0];
+                double z2 = i > 1 ? value[1] : -value[1];
+
+                double expected = Math.pow(z1, z2);
+                double actual = (double) saveCast(h.potenzieren().invoke(z1, z2), double.class);
+                if (Double.compare(expected, actual) != 0) {
+                    fail(messageBuilder(z1, z2, expected, actual, "potenzieren"));
+                }
+            }
+        }
+    }
 }
