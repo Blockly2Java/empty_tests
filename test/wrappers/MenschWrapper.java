@@ -1,6 +1,9 @@
 package wrappers;
 
-import levenshtein.*;
+import levenshtein.AttributeWrapper;
+import levenshtein.ClassWrapper;
+import levenshtein.ConstructorWrapper;
+import levenshtein.MethodWrapper;
 
 public class MenschWrapper<T> extends ClassWrapper<T>
 {
