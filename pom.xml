@@ -6,6 +6,13 @@
   <artifactId>TestsAssignment</artifactId>
   <version>1.0</version>
   <name>Tests - Assignment</name>
+  <repositories>
+  <repository>
+    <id>github</id>
+    <name>GitHub Packages</name>
+    <url>https://${env.GITHUB_PACKAGES_USERNAME}:${env.GITHUB_PACKAGES_TOKEN}@maven.pkg.github.com/ValentinHerrmann/Artemis-Testing-Patterns</url>
+  </repository>
+  </repositories>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <argLine>-Dfile.encoding=UTF-8</argLine>

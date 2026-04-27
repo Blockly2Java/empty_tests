@@ -1,6 +1,6 @@
 package wrappers;
 
-import levenshtein.*;
+import de.tum.cit.aet.levenshtein.*;
 
 public class MainWrapper<T> extends ClassWrapper<T>
 {
