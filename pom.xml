@@ -5,7 +5,7 @@
   <groupId>b2j</groupId>
   <artifactId>taschenrechner_tests</artifactId>
   <version>1.0.0</version>
-  <name>Tests - Assignment</name>
+  <name>Taschenrechner Tests - Assignment</name>
   <repositories>
     <repository>
       <id>github</id>
