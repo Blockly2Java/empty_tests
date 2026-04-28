@@ -3,8 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>b2j</groupId>
-  <artifactId>TestsAssignment</artifactId>
-  <version>1.0</version>
+  <artifactId>taschenrechner_tests</artifactId>
+  <version>1.0.0</version>
   <name>Tests - Assignment</name>
   <repositories>
     <repository>
@@ -128,6 +128,14 @@
         <configuration>
           <source>17</source>
           <target>17</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+        <configuration>
+          <!-- Package compiled tests/resources as the main artifact. -->
+          <classesDirectory>${project.build.testOutputDirectory}</classesDirectory>
         </configuration>
       </plugin>
       <plugin>
