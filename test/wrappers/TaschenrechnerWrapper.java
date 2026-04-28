@@ -1,8 +1,8 @@
 package wrappers;
 
-import levenshtein.*;
 
-import java.lang.reflect.Method;
+import de.tum.cit.aet.levenshtein.ClassWrapper;
+import de.tum.cit.aet.levenshtein.MethodWrapper;
 
 public class TaschenrechnerWrapper<T> extends ClassWrapper<T>
 {

@@ -3,10 +3,10 @@ package test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import wrappers.TaschenrechnerWrapper;
-
-import static levenshtein.Utils.saveCast;
 import static org.junit.jupiter.api.Assertions.fail;
+
+import static de.tum.cit.aet.levenshtein.Utils.saveCast;
+import wrappers.TaschenrechnerWrapper;
 
 public class Tests {
     private static String[] outLines;

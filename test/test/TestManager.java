@@ -12,7 +12,7 @@ import org.junit.jupiter.api.TestFactory;
 import de.tum.cit.aet.levenshtein.LevenshteinTest;
 import static de.tum.cit.aet.levenshtein.StructuralLevenshtein.DetailLevel.ONE_PER_CLASS;
 import static de.tum.cit.aet.levenshtein.StructuralLevenshtein.structuralTestFactory;
-import wrappers.MainWrapper;
+import wrappers.TaschenrechnerWrapper;
 
 
 
