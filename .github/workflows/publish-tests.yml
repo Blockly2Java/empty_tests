@@ -15,6 +15,8 @@ jobs:
     env:
       GITHUB_ACTOR: ${{ github.actor }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_PACKAGES_USERNAME: ${{ secrets.GH_PACKAGES_USERNAME }}
+      GH_PACKAGES_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -27,11 +29,8 @@ jobs:
           java-version: '17'
           cache: maven
           server-id: github
-          server-username: GITHUB_ACTOR
-          server-password: GITHUB_TOKEN
+          server-username: GH_PACKAGES_USERNAME
+          server-password: GH_PACKAGES_TOKEN
 
       - name: Publish to GitHub Packages
-        env:
-          GH_PACKAGES_USERNAME: ${{ secrets.GH_PACKAGES_USERNAME }}
-          GH_PACKAGES_TOKEN: ${{ secrets.GH_TOKEN }}
         run: mvn -B -DskipTests clean deploy
