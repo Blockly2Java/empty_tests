@@ -34,4 +34,4 @@ jobs:
         env:
           GH_PACKAGES_USERNAME: ${{ secrets.GH_PACKAGES_USERNAME }}
           GH_PACKAGES_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: mvn -B -DskipTests deploy
+        run: mvn -B -DskipTests clean deploy
