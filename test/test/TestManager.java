@@ -45,9 +45,60 @@ public class TestManager {
     }
 
     @Test
-    void testMain() {
+    void testMenschGetX() {
         try {
-            Tests.testMain();
+            Tests.testMenschGetX();
+        }
+        catch (AssertionError e) {
+            fail(e.getMessage());
+        }
+    }
+
+
+
+    @Test
+    void testMenschGetY() {
+        try {
+            Tests.testMenschGetY();
+        }
+        catch (AssertionError e) {
+            fail(e.getMessage());
+        }
+    }
+
+
+
+    @Test
+    void testGassiGehen() {
+        try {
+            fail("Dieser Teil kann noch nicht automatisch überprüft werden.");
+            Tests.testGassiGehen();
+        }
+        catch (AssertionError e) {
+            fail(e.getMessage());
+        }
+    }
+
+
+
+    @Test
+    void testHundRufen() {
+        try {
+            fail("Dieser Teil kann noch nicht automatisch überprüft werden.");
+            Tests.testHundRufen();
+        }
+        catch (AssertionError e) {
+            fail(e.getMessage());
+        }
+    }
+
+
+
+    @Test
+    void testBeiFuss() {
+        try {
+            fail("Dieser Teil kann noch nicht automatisch überprüft werden.");
+            Tests.testBeiFuss();
         }
         catch (AssertionError e) {
             fail(e.getMessage());
